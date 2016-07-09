@@ -13,25 +13,31 @@
 <span style="display: inline-block; vertical-align: top; line-height: 6em; margin-left: 680px; margin-top: -108px; font-size: 18px; font-weight: bold;">
 <a href="#" style="color: black;">ABOUT US</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" style="color: black;">MANAGE STORE</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="contactpage.jsp" style="color: black;">CONTACT US</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="el" style="color: black;">LOGIN/SIGNUP</a>
 </span>
-<div id="log" style="display: none; vertical-align: top; margin-top: -45px; margin-left: 85%; z-index: 9999;">
-<span>
-Username <input type="text" id="uname" name="uname" placeholder="Username">
-Password <input type="text" id="pword" name="pword" placeholder="Password">
-<input type="submit" value="Submit">&nbsp;&nbsp;<input type="reset" value="Reset">
+<div id="log" style="display: none; vertical-align: top; margin-top: -45px; margin-left: 1089px; margin-right: 22px; position: absolute; background-color: white;">
+<form>
+<span class=".sam">
+Username&nbsp;&nbsp;<input type="text" id="uname" name="uname" placeholder="Username">
+Password&nbsp;&nbsp;&nbsp;<input type="password" id="pword" name="pword" placeholder="Password">
+<span><input type="submit" value="Submit"></span>&nbsp;&nbsp;<span style="margin-left: 8px;"><input type="reset" value="Reset"></span>&nbsp;&nbsp;<span style="margin-left: 8px;"><input type="button" value="Cancel" class="cancel"></span>
 </span>
+</form>
 </div>
 </div>
 <div style="padding-top: 45px;">
-<h1><span style="padding-left: 465px; font-size: 39px; color: red; position: fixed;">STORE MANAGEMENT</span></h1>
+<h1><span style="padding-left: 465px; font-size: 39px; color: red; position: relative;">STORE MANAGEMENT</span></h1>
 </div>
 <script type="text/javascript">
-function inHandler(ev) {
+function inHandler(ev){
 	$("#log").css( "display", "block" );  
-}
-/* function outHandler(ev) {
-	$("#log").css( "display", "none" );  
+} 
+$(".el, .sam").hover(inHandler);
+
+  $(".cancel").click(function(){
+	$("#log").css("display", "none");
+});   
+/* function cancel(){
+	alert("Hello");
 } */
-$(".el").hover(inHandler);
 </script>
 </body>
 </html>
